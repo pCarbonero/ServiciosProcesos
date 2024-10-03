@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MiApi", "MiApi\MiApi.pyproj", "{03542A2F-F97C-49B7-980A-84CCB4F97B0A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Tarea1_1ApiRest", "Tarea1_1ApiRest\Tarea1_1ApiRest.pyproj", "{58368F81-D568-4283-B397-4660C8D54B42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03542A2F-F97C-49B7-980A-84CCB4F97B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03542A2F-F97C-49B7-980A-84CCB4F97B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58368F81-D568-4283-B397-4660C8D54B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58368F81-D568-4283-B397-4660C8D54B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44849116-B809-44AC-BC6E-FD8242483E35}
+	EndGlobalSection
+EndGlobal
