@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pcarbonero\\Desktop\\Clase\\Servicios\\API\\MiApiS\\",
+  "WorkspaceRootPath": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58368F81-D568-4283-B397-4660C8D54B42}|Tarea1_1ApiRest\\Tarea1_1ApiRest.pyproj|C:\\Users\\pcarbonero\\Desktop\\Clase\\Servicios\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{58368F81-D568-4283-B397-4660C8D54B42}|Tarea1_1ApiRest\\Tarea1_1ApiRest.pyproj|E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{58368F81-D568-4283-B397-4660C8D54B42}|Tarea1_1ApiRest\\Tarea1_1ApiRest.pyproj|solutionrelative:Tarea1_1ApiRest\\Tarea1_1ApiRest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\MiApi.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|solutionrelative:MiApi\\MiApi.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\apiPut.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|solutionrelative:MiApi\\apiPut.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\miApiPost.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{03542A2F-F97C-49B7-980A-84CCB4F97B0A}|MiApi\\MiApi.pyproj|solutionrelative:MiApi\\miApiPost.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "miApiPost.py",
+              "DocumentMoniker": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\miApiPost.py",
+              "RelativeDocumentMoniker": "MiApi\\miApiPost.py",
+              "ToolTip": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\miApiPost.py",
+              "RelativeToolTip": "MiApi\\miApiPost.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-10-04T14:51:19.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MiApi.py",
+              "DocumentMoniker": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\MiApi.py",
+              "RelativeDocumentMoniker": "MiApi\\MiApi.py",
+              "ToolTip": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\MiApi.py",
+              "RelativeToolTip": "MiApi\\MiApi.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-10-04T14:38:36.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "apiPut.py",
+              "DocumentMoniker": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\apiPut.py",
+              "RelativeDocumentMoniker": "MiApi\\apiPut.py",
+              "ToolTip": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\MiApi\\apiPut.py",
+              "RelativeToolTip": "MiApi\\apiPut.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-10-04T14:38:09.801Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Tarea1_1ApiRest.py",
-              "DocumentMoniker": "C:\\Users\\pcarbonero\\Desktop\\Clase\\Servicios\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
+              "DocumentMoniker": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
               "RelativeDocumentMoniker": "Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
-              "ToolTip": "C:\\Users\\pcarbonero\\Desktop\\Clase\\Servicios\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
+              "ToolTip": "E:\\Programas\\Git Docs\\ServiciosProcesos\\API\\MiApiS\\Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
               "RelativeToolTip": "Tarea1_1ApiRest\\Tarea1_1ApiRest.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-10-03T10:26:19.792Z",
               "EditorCaption": ""
