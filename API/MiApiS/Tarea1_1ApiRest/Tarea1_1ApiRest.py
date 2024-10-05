@@ -7,6 +7,7 @@ from pip._vendor import requests
 
 
 
+    
 #funciones
 
 def peticionGet():
@@ -22,10 +23,12 @@ def peticionGet():
         info = int(input("Que tipo de info quieres "))
 
         if (info == 1):
+            api_ur += "/profesores"
             print("Info profes ")
 
         elif (info == 2):
             idProf = input("Inserta el id del profesor ")
+            api_ur += "/profesores/" + idProf   
             print("Info profe " + idProf)
         else:
             print("Opcion no valida")
@@ -37,14 +40,17 @@ def peticionGet():
         info = int(input("Que tipo de info quieres "))
 
         if (info == 1):
+            api_ur += "/profesores/asignaturas"
             print("Info asignaturas ")
 
         elif (info == 2):
             idAsig = input("Inserta el id de la asignatura ")
+            api_ur += "/profesores/asignaturas" + idAsig
             print("Info asignatura " + idAsig)
 
         elif (info == 3):
             idProf = input("De que profesor? ")
+            api_ur += "/profesores/" + idProf + "/asignaturas"
             print("Asignaturas del profesor " + idProf)
         else:
             print("Opcion no valida")
@@ -86,8 +92,19 @@ def peticionPost():
 def peticionPatch():
     print("Hacer PATCH")
 
-def peticionPut():
-    print("Hacer PUT")
+def peticionPut(api_url):
+    oldIdProf = input("Id profesor que quieres modificar ")
+    newIdProf = input("Id profesor ")
+    dni = int(input("DNI profesor "))
+    nombre = input("Nombre del profesor ")
+    apellidos = input("Apellidos del profesor ")
+    tlf = int(input("Telefono del profesor "))
+    cuenta = int(input("Cuenta bancaria del profesor "))
+    
+    api_url += "/profesores/" + oldIdProf
+
+    print(f"PROFESOR {oldIdProf} MODIFICADO A: {newIdProf}, {dni}, {nombre}, {apellidos}, {tlf}, {cuenta} ")
+    
 
 def peticionDel():
     print("1. Profesor ")
@@ -96,6 +113,7 @@ def peticionDel():
     
     if (opc == 1):
         idProf = int(input("Id profesor "))
+        api_url += ""
 
         print(f"Profesor {idProf} borrado ")
 
@@ -106,24 +124,23 @@ def peticionDel():
     else:
         print("Opcion no valida ")
 
-
-opc = 1
-
-
-
-
-while opc != 0:
+def mostrarMenu():
+    api_url = "http://nada.com"
     print("1. Recibir informacion (GET)")
     print("2. Mandar informcion (POST)")
     print("3. Actualizar informacion (PATCH)")
     print("4. Reemplazar informacion (PUT)")
     print("5. Borrar informacion (DEL)")
     print("0. Salir")
-
     opc = int(input("Indica que opcion quieres realizar "))
+    return opc
 
 
-    #api_url = "https://urlfalsa.algo.com"
+opc = mostrarMenu()
+
+while opc != 0:
+
+    api_url = "https://urlfalsa.algo.com"
     if (opc == 1):
         peticionGet()
 
@@ -134,7 +151,7 @@ while opc != 0:
         peticionPatch()
 
     elif (opc == 4):
-        peticionPut()
+        peticionPut(api_url)
 
     elif (opc == 5):
         peticionDel()
@@ -144,6 +161,8 @@ while opc != 0:
 
     else:
         print("Opcion no valida")
+
+    opc = mostrarMenu()
 
     
 
