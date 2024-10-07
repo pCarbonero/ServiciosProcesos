@@ -20,6 +20,7 @@ def peticionGet():
     if (info == 1):
         print("1. Todos los profesores ")
         print("2. Un unico profesor ")
+
         info = int(input("Que tipo de info quieres "))
 
         if (info == 1):

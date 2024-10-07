@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>03542a2f-f97c-49b7-980a-84ccb4f97b0a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>elPatch.py</StartupFile>
+    <StartupFile>Flask\ApiFlask.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,8 +23,12 @@
   <ItemGroup>
     <Compile Include="apiPut.py" />
     <Compile Include="elPatch.py" />
+    <Compile Include="Flask\ApiFlask.py" />
     <Compile Include="MiApi.py" />
     <Compile Include="miApiPost.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Flask\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
