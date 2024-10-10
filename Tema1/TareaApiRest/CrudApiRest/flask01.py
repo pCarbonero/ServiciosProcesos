@@ -17,7 +17,7 @@ def get_all_profesores():
 
 @app.route('/')
 @app.get("/profesores/<int:id>")
-def get_countries(id):
+def get_profesores(id):
     for profesor in profesores:
         if profesor['id'] == id:
             return profesor, 200
