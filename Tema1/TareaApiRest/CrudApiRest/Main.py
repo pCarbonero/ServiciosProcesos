@@ -1,5 +1,8 @@
 import CrudApiRest
 
+#PRIMERO INICIAR LA API EN EL ARCHIVO flask01 PARA USAR LA APP MUCHAS GRACIaS :)
+
+
 def mostrarMenu():
     print("1. Recibir informacion (GET)")
     print("2. Mandar informcion (POST)")
@@ -40,13 +43,13 @@ while opc != 0:
         CrudApiRest.peticionPost(api_url, tipo)
 
     elif (opc == 3):
-        CrudApiRest.peticionPatch(api_url)
+        CrudApiRest.peticionPatch(api_url, tipo)
 
     elif (opc == 4):
         CrudApiRest.peticionPut(api_url, tipo)
 
     elif (opc == 5):
-        CrudApiRest.peticionDel(api_url)
+        CrudApiRest.peticionDel(api_url, tipo)
 
     else:
         print("Opcion no valida")
