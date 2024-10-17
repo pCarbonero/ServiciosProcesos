@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>aa2331f1-42ec-412a-811b-6faaf02d03b6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Main.py</StartupFile>
+    <StartupFile>app\run.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\asignaturas\routes.py" />
+    <Compile Include="app\asignaturas\__init__.py" />
+    <Compile Include="app\profesores\routes.py" />
+    <Compile Include="app\profesores\__init__.py" />
+    <Compile Include="app\run.py" />
+    <Compile Include="app\__init__.py" />
     <Compile Include="CrudApiRest.py" />
     <Compile Include="CrudProfesores.py" />
     <Compile Include="flask01.py" />
@@ -30,6 +36,11 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\asignaturas\" />
+    <Folder Include="app\profesores\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

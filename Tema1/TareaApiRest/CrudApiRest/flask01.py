@@ -16,6 +16,8 @@ asignaturas = [
     {"id": 3, "Titulo": "Modelado 3D", "NumHoras": "140", "idProfesor": 3}
 ]
 
+
+
 #get all
 @app.get('/')
 def get_all_():
