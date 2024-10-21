@@ -4,6 +4,7 @@ from flask import *
 from app import asignaturas
 from asignaturas.routes import *
 
+
 profesoresBP = Blueprint('profesores', __name__)
 
 

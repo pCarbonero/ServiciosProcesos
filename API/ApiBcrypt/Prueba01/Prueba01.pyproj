@@ -2,17 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>aa2331f1-42ec-412a-811b-6faaf02d03b6</ProjectGuid>
+    <ProjectGuid>2a3715a3-bb2e-46f2-a3ee-af77aca6b4be</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app\run.py</StartupFile>
+    <StartupFile>Prueba01.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>CrudApiRest</Name>
-    <RootNamespace>CrudApiRest</RootNamespace>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|3.12</InterpreterId>
+    <Name>Prueba01</Name>
+    <RootNamespace>Prueba01</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,31 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\asignaturas\routes.py" />
-    <Compile Include="app\asignaturas\__init__.py" />
-    <Compile Include="app\ficheros.py" />
-    <Compile Include="app\profesores\routes.py" />
-    <Compile Include="app\profesores\__init__.py" />
-    <Compile Include="app\run.py" />
-    <Compile Include="app\users\routes.py" />
-    <Compile Include="app\users\__init__.py" />
-    <Compile Include="app\__init__.py" />
-    <Compile Include="CrudApiRest.py" />
-    <Compile Include="CrudProfesores.py" />
-    <Compile Include="flask01.py" />
-    <Compile Include="Main.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|3.12" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\asignaturas\" />
-    <Folder Include="app\users\" />
-    <Folder Include="app\profesores\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\users\users.json" />
+    <Compile Include="Prueba01.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
