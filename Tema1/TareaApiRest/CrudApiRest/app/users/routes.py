@@ -4,6 +4,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import JWTManager
 from flask_jwt_extended import *
 from app.ficheros import escribirFichero, leerFichero
+from bcrypt import *
 
 ficheroUsers = "../CrudApiRest/app/users/users.json"
 
@@ -30,13 +31,16 @@ def registerUser():
 def loginUser():
     misUsers = leerFichero(ficheroUsers)
     if request.is_json:
-        userGet = request.get_json()
+        userRequest = request.get_json()
+        nombreUsuario = userRequest["username"]
         for usuario in misUsers:
-            if usuario["username"] == userGet["username"]:
-                   password = userGet["password"].encode('utf-8')                 
-                   if usuario["password"] == password:
-                       token = create_access_token(identity = userGet["username"])
-                       return {"token": token}, 201                         
+            if usuario["username"] == nombreUsuario:
+                   password = userRequest["password"].encode('utf-8')                 
+                   if checkpw(password, bytes.fromhex(usuario["password"])):
+                       token = create_access_token(identity = userRequest["username"])
+                       return {"token": token}, 201
+                   else:
+                       return {"error": "Contrasena y/o usuario incorrectos"}, 401
         return {"error": "Contrasena y/o usuario incorrectos"}, 401
     else:
         return {"error": "Request must be JSON"}, 415

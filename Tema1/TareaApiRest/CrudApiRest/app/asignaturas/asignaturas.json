@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "Titulo": "Lengua castellana",
+    "NumHoras": "150",
+    "idProfesor": 1
+  },
+  {
+    "id": 2,
+    "Titulo": "Historia de Espanya",
+    "NumHoras": "120",
+    "idProfesor": 2
+  },
+  {
+    "id": 3,
+    "Titulo": "Modelado 3D",
+    "NumHoras": "140",
+    "idProfesor": 3
+  }
+]

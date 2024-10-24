@@ -1,47 +1,44 @@
 from urllib import request
 from flask import *
 
+from app.ficheros import escribirFichero, leerFichero
+
 asignaturasBP = Blueprint('asignaturas', __name__)
 
-asignaturas = [
-    {"id": 1, "Titulo": "Lengua castellana", "NumHoras": "150", "idProfesor": 1},
-    {"id": 2, "Titulo": "Historia de Espanya", "NumHoras": "120", "idProfesor": 2},
-    {"id": 3, "Titulo": "Modelado 3D", "NumHoras": "140", "idProfesor": 3}
-]
-
-
-def devolverAsig():
-    return asignaturas
-
-
-
+ficheroAsignaturas = "../CrudApiRest/app/asignaturas/asignaturas.json"
 
 @asignaturasBP.get('/')
 def get_all_asignaturas():
+    asignaturas = leerFichero(ficheroAsignaturas)
     return jsonify(asignaturas)
 
 @asignaturasBP.get("/<int:id>")
 def get_asignaturas(id):
+    asignaturas = leerFichero(ficheroAsignaturas)
     for asignatura in asignaturas:
         if asignatura['id'] == id:
             return asignatura, 200
     return {"error": "asignatura no encontrada"}, 404
 
 def _find_next_idAsig():
+    asignaturas = leerFichero(ficheroAsignaturas)
     return max(asignatura["id"] for asignatura in asignaturas)+1
 
 @asignaturasBP.post("/")
 def add_asignatura():
+    asignaturas = leerFichero(ficheroAsignaturas)
     if request.is_json:
         asignatura = request.get_json()
         asignatura["id"] = _find_next_idAsig()
         asignaturas.append(asignatura)
+        escribirFichero(ficheroAsignaturas, asignaturas)
         return asignatura, 201
     return {"error": "Request must be JSON"}, 415
 
 @asignaturasBP.put("/<int:id>")
 @asignaturasBP.patch("/<int:id>")
 def modify_asignatura(id):
+    asignaturas = leerFichero(ficheroAsignaturas)
     if request.is_json:
         newAsignatura = request.get_json()
 
@@ -53,6 +50,7 @@ def modify_asignatura(id):
 
 @asignaturasBP.delete("/<int:id>")
 def del_asignatura(id):
+    asignaturas = leerFichero(ficheroAsignaturas)
     for asignatura in asignaturas:
         if asignatura["id"] == id:
             asignaturas.remove(asignatura)
