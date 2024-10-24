@@ -28,20 +28,15 @@ def registerUser():
 
 @usersBP.get('/')
 def loginUser():
-    users = leerFichero(ficheroUsers)
+    misUsers = leerFichero(ficheroUsers)
     if request.is_json:
-        user = request.get_json()
-        nombre = user["username"]
-        for usuario in users:
-            if usuario["username"] == nombre:
-                   password = user['password'].encode('utf-8')                 
+        userGet = request.get_json()
+        for usuario in misUsers:
+            if usuario["username"] == userGet["username"]:
+                   password = userGet["password"].encode('utf-8')                 
                    if usuario["password"] == password:
-                       token = create_access_token(identity = nombre)
-                       return {"token:"}, token, 201
-                   else:
-                       return {"error": "Contrasena y/o usuario incorrectos"}, 401
-            else:
-
-                return {"error": "Contrasena y/o usuario incorrectos"}, 401
+                       token = create_access_token(identity = userGet["username"])
+                       return {"token": token}, 201                         
+        return {"error": "Contrasena y/o usuario incorrectos"}, 401
     else:
         return {"error": "Request must be JSON"}, 415
