@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CrudApiRest", "CrudApiRest\CrudApiRest.pyproj", "{AA2331F1-42EC-412A-811B-6FAAF02D03B6}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Api", "CrudApiRest\Api.pyproj", "{AA2331F1-42EC-412A-811B-6FAAF02D03B6}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Crud", "Crud\Crud.pyproj", "{39803A9E-BDDD-4C90-9279-F587FA3E7881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AA2331F1-42EC-412A-811B-6FAAF02D03B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA2331F1-42EC-412A-811B-6FAAF02D03B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39803A9E-BDDD-4C90-9279-F587FA3E7881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39803A9E-BDDD-4C90-9279-F587FA3E7881}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

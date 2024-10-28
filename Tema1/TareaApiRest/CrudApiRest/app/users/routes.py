@@ -27,7 +27,7 @@ def registerUser():
         return {'token': token}, 201
     return {"error": "Request must be JSON"}, 415
 
-@usersBP.get('/')
+@usersBP.post('/login')
 def loginUser():
     misUsers = leerFichero(ficheroUsers)
     if request.is_json:
