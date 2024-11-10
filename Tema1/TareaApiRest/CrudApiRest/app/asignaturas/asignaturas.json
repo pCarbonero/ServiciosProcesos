@@ -16,5 +16,11 @@
     "Titulo": "Modelado 3D",
     "NumHoras": "140",
     "idProfesor": 3
+  },
+  {
+    "id": 3,
+    "Titulo": "EPVA",
+    "NumHoras": "80",
+    "idProfesor": 1
   }
 ]

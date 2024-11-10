@@ -20,6 +20,14 @@ def get_asignaturas(id):
             return asignatura, 200
     return {"error": "asignatura no encontrada"}, 404
 
+# @asignaturasBP.get("/profesores/<int:id>") #este método Get
+# def get_asignaturasDeUnProfesor(id):
+#     asignaturas = leerFichero(ficheroAsignaturas)
+#     asignaturas_profesor = [asignatura for asignatura in asignaturas if asignatura.get('idProfesor') == id]
+#     if asignaturas_profesor:
+#         return jsonify(asignaturas_profesor), 200
+#     return {"error": "No se encontraron asignaturas para el profesor con el ID proporcionado"}, 404
+
 def _find_next_idAsig():
     asignaturas = leerFichero(ficheroAsignaturas)
     return max(asignatura["id"] for asignatura in asignaturas)+1

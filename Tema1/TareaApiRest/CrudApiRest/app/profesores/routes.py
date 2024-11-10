@@ -23,18 +23,13 @@ def get_profesores(id):
             return profesor, 200
     return {"error": "profesor not found"}, 404
 
-# @profesoresBP.get('/<int:id>/asignaturas')
-# def get_asigProfesor(id):
-#     list = []
-#     asig = asignaturas.devolverAsig()
-
-#     for asignatura in asignaturas:
-#         if asignatura['id'] == id:
-#             list.append(asignatura)
-#     if len(list) > 0:
-#         return list,200
-#     else:
-#         return {"error": "nosduwe"}, 404
+@profesoresBP.get("/<int:id>/asignaturas") #este método Get
+def get_asignaturasDeUnProfesor(id):
+    asignaturas = leerFichero("../CrudApiRest/app/asignaturas/asignaturas.json")
+    asignaturas_profesor = [asignatura for asignatura in asignaturas if asignatura.get('idProfesor') == id]
+    if asignaturas_profesor:
+        return jsonify(asignaturas_profesor), 200
+    return {"error": "No se encontraron asignaturas para el profesor con el ID proporcionado"}, 404
 
 
 def _find_next_idProf():
