@@ -3,22 +3,31 @@ from time import *
 from random import *
 
 class Puente(Thread):
-    norte = Semaphore(1)
-    sur = Semaphore(1)
+    sem = Semaphore(1)
     def __init__(self, nombre):
         Thread.__init__(self, name = nombre)    
 
 
     def run(self):
-        self.semaphore.acquire()
-        print(self.name, "Entra al cine")    
-        sleep(randint(1,3))
-        #print(self.name, "Viendo la pelicula")
-        #sleep(5)
-        self.semaphore.release()
-        print(self.name, f'saliendo. Espacios:{Cine.semaphore._value}')
-        sleep(randint(1,3))
+        a = randint(1,2)
+        if (a == 1):
+            self.norte()
+        else:
+            self.sur()
+        print(f"{self.name} llega al otro lado del puente")
+
+    def norte(self):
+        self.sem.acquire()
+        print(f"{self.name} viaja por el puente al norte")
+        sleep(2)
+        self.sem.release()
+    def sur(self):
+        self.sem.acquire()
+        print(f"{self.name} viaja por el puente al sur")
+        sleep(2)
+        self.sem.release()
+
 
 if __name__ == "__main__":
-    for i in range(1, 51):
-        Cine(f"Persona {i}").start()
+    for i in range(1, 11):
+        Puente(f"Vehiculo {i}").start()
