@@ -7,7 +7,7 @@ class Libreria(Thread):
     libros = [False, False, False, False, False, False, False, False, False]
     c = Condition()
     def __init__(self, nombre):
-        Thread.__init__(self, name = nombre)
+        Thread.__init__(self, name = nombre) 
 
 
 class Estudiante(Thread):
@@ -24,13 +24,13 @@ class Estudiante(Thread):
 
         with self.libreria.c:
             while self.libreria.libros[n1] == True or self.libreria.libros[n2] == True:
-                print(f"{self.name} espera para el libro {n1+1} y {n2+1}")
+                print(f"{self.name} espera para el libro {n1+1} y {n2+1} 📖🕵️")
                 self.libreria.c.wait()
             self.libreria.libros[n1] = True
             self.libreria.libros[n2] = True
-        print(f"{self.name} ha cogido {n1+1} y {n2+1}")
+        print(f"{self.name} ha cogido {n1+1} y {n2+1} 👌📖")
         sleep(2)
-        print(f"{self.name} ha devuelto {n1+1} y {n2+1}")
+        print(f"{self.name} ha devuelto {n1+1} y {n2+1} 😍📙")
 
         with self.libreria.c:
             self.libreria.libros[n1] = False
@@ -47,3 +47,4 @@ if __name__ == "__main__":
 
 
 
+ 
