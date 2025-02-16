@@ -4,20 +4,18 @@ from random import *
 
 
 class AdivinaNumero(Thread):
-    numeroSecreto = randint(0,100)
+    numeroSecreto = randint(1,10)
     numeroAdivinado = False
-    s = Semaphore(1)
+    lock = Lock()
 
     def __init__(self, nombre):
         Thread.__init__(self, name = nombre)
 
     def run(self):
-        sleep(randint(1,5))
         while True:
-            sleep(randint(1,5))
-            with AdivinaNumero.s:
+            with self.lock:
                 if (AdivinaNumero.numeroAdivinado == False):
-                    num = randint(0,100)
+                    num = randint(1,10)
                     if (num == self.numeroSecreto):
                         print(f'{self.name} ha adivinado el numero {AdivinaNumero.numeroSecreto} 😨😩😤')
                         AdivinaNumero.numeroAdivinado = True
